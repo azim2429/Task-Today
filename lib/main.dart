@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gradient_app_bar/gradient_app_bar.dart';
 import 'package:tasktoday/widget/task_list.dart';
 import 'package:tasktoday/widget/add_task.dart';
+import 'package:tasktoday/widget/user_task.dart';
 void main() {
   runApp(MyApp());
 }
@@ -43,10 +44,10 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
-          TaskList(),
+          UserTask(),
         ],
       ),
-      floatingActionButton: AddTask(),
+//      floatingActionButton: AddTask(),
       resizeToAvoidBottomInset: false,
     );
   }
