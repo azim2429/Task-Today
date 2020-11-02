@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:gradient_app_bar/gradient_app_bar.dart';
-import 'package:tasktoday/widget/task_list.dart';
-import 'package:tasktoday/widget/add_task.dart';
 import 'package:tasktoday/widget/user_task.dart';
 void main() {
   runApp(MyApp());
@@ -41,11 +39,8 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text('Task Today'),
         centerTitle: true,
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: <Widget>[
-          UserTask(),
-        ],
+      body: Container(
+        child: UserTask(),
       ),
 //      floatingActionButton: AddTask(),
       resizeToAvoidBottomInset: false,

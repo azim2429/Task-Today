@@ -3,13 +3,16 @@ import 'package:tasktoday/model/task.dart';
 
 class TaskList extends StatelessWidget {
   final List<Task> task;
-  TaskList(this.task);
+  final Function DeleteTc;
+
+  TaskList(this.task, this.DeleteTc);
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: task.map((tks) {
         return Card(
+          color: Colors.white70,
           elevation: 8,
           margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
           child: Padding(
@@ -17,13 +20,14 @@ class TaskList extends StatelessWidget {
             child: ListTile(
               leading: CircleAvatar(
                 radius: 25,
-                backgroundColor: Colors.pinkAccent[400],
+                backgroundColor: Colors.pinkAccent[200],
                 child: Padding(
                   padding: const EdgeInsets.all(8),
                   child: FittedBox(
-                    child: Text(
-                      tks.id,
-                      style: TextStyle(color: Colors.white),
+                    child: IconButton(
+                      color: Colors.white,
+                      icon: Icon(Icons.delete),
+                      onPressed: () => DeleteTc(tks.id),
                     ),
                   ),
                 ),
@@ -32,11 +36,6 @@ class TaskList extends StatelessWidget {
                 tks.taskTitle,
                 style:
                     TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
-              ),
-              trailing: IconButton(
-                icon: Icon(Icons.delete),
-                color: Colors.red,
-                onPressed: null,
               ),
             ),
           ),
