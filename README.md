@@ -47,7 +47,6 @@ flutter test
 
 # Plugins
 
-- [moor_flutter](https://pub.dev/packages/moor_flutter)
 - [intl](https://pub.dev/packages/intl)
 - [provider](https://pub.dev/packages/provider)
 - [gradient_app_bar](https://pub.dev/packages/gradient_app_bar)
