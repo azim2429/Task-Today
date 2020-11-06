@@ -8,7 +8,8 @@ A Simple To-Do app built with Flutter
 
 ||||
 |--|--|--|
-|<img src="./lib/image/Enter_Task.jp" width="200" height="200" />|
+|<img src="./lib/image/Enter_Task.jpg" width="200" height="400" />|
+|<img src="./lib/image/Task_UI.jpg" width="200" height="400" />|
 <!-- ![add_task](./docs/add_task.png) |![delete_task](./docs/delete_task.png) |
 | ![eventlist](./docs/event_list.png) | ![add_event](./docs/add_event.png) |![delete_event](./docs/empty_task_list.png) | -->
 
