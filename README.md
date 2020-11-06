@@ -8,7 +8,7 @@ A Simple To-Do app built with Flutter
 
 
 <img src="./lib/image/Enter_Task.jpg" width="200" height="400" />
-<img src="./lib/image/Task_UI.jpg" width="200" height="400" />
+<img src="./lib/image/Task_UI.jpg" width="200" height="425" />
 
 
 # Command To Install
