@@ -28,7 +28,7 @@ class AddTask extends StatelessWidget {
                             Card(
                               elevation: 5,
                               child: TextField(
-                                cursorColor: Colors.deepPurple,
+                                cursorColor: Colors.blue,
                                 decoration: InputDecoration(
                                   labelText: 'Enter your tasks',
                                   border: InputBorder.none,
@@ -40,7 +40,7 @@ class AddTask extends StatelessWidget {
                               ),
                             ),
                             FlatButton(
-                              color: Colors.deepPurple,
+                              color: Colors.blue,
                               child: Text(
                                 'Submit',
                                 style: TextStyle(color: Colors.white),

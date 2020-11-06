@@ -16,29 +16,31 @@ class _UserTaskState extends State<UserTask> {
   final List<Task> _taskList = [
     Task(
       id: 1,
-      taskTitle: 'Task-1',
+      taskTitle: 'Exam',
       dateTime: DateTime.now(),
     ),
     Task(
       id: 2,
-      taskTitle: 'Task-2',
+      taskTitle: 'Book',
       dateTime: DateTime.now(),
     ),
     Task(
       id: 3,
-      taskTitle: 'Task-3',
+      taskTitle: 'App',
       dateTime: DateTime.now(),
     ),
     Task(
       id: 4,
-      taskTitle: 'Task-4',
+      taskTitle: 'Namaz',
       dateTime: DateTime.now(),
     ),
     Task(
       id: 5,
-      taskTitle: 'Task-5',
+      taskTitle: 'Post',
       dateTime: DateTime.now(),
-    )
+    ),
+
+
   ];
 
   void _addNewTask(String newtaskName) {
@@ -69,17 +71,24 @@ class _UserTaskState extends State<UserTask> {
       });
     });
   }
+  String editTask(var index){
+    return (_taskList[index].taskTitle);
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        if (_taskList.length == 0) NoTask(),
-        Container(
-          child: TaskList(_taskList, _deleteTask),
-        ),
-        if (_taskList.length < 5) Center(child: AddTask(_addNewTask)),
+    return SingleChildScrollView(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          if (_taskList.length == 0) NoTask(),
+
+          SingleChildScrollView(
+            child: Container(
+              child: TaskList(_taskList,_deleteTask,_addNewTask),
+            ),
+          ),
+          if (_taskList.length < 5) Center(child: AddTask(_addNewTask)),
 //        if (_taskList.length == 5)
 //          Padding(
 //            padding: const EdgeInsets.all(20.0),
@@ -88,10 +97,11 @@ class _UserTaskState extends State<UserTask> {
 //                onPressed: () => showToast("Only 5 task per day",
 //                    duration: Toast.LENGTH_LONG, gravity: Toast.BOTTOM)),
 //          ),
-      SizedBox(height: 50),
-        if (_taskList.length == 5)
-       TaskBucket(_taskList),
-      ],
+        SizedBox(height: 50),
+          if (_taskList.length == 5)
+         TaskBucket(_taskList,_deleteTask,_addNewTask),
+        ],
+      ),
     );
   }
 }

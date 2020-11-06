@@ -11,7 +11,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       debugShowCheckedModeBanner: false,
@@ -34,9 +33,11 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: GradientAppBar(
         elevation: 4,
-        backgroundColorEnd: Colors.pinkAccent,
-        backgroundColorStart: Colors.deepPurpleAccent,
-        title: Text('Task Today'),
+        backgroundColorEnd: Colors.blue[500],
+        backgroundColorStart: Colors.lightBlueAccent,
+        title: Text('Task-Today',style: TextStyle(
+          fontWeight: FontWeight.bold
+        ),),
         centerTitle: true,
       ),
       body: Container(
