@@ -58,7 +58,7 @@ flutter test
 
 ## Author
 
-👤 **Abdul Azim**
+👨‍💻 **Abdul Azim**
 
 * Github: [@azim2429](https://github.com/azim2429)
 
