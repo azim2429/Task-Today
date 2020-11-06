@@ -6,10 +6,10 @@ A Simple To-Do app built with Flutter
 
 ## Screenshots
 
-
-<img src="./lib/image/Enter_Task.jpg" width="200" height="400" />
+<p float="left">
+<img src="./lib/image/Enter_Task.jpg" width="200" height="450" />
 <img src="./lib/image/Task_UI.jpg" width="200" height="450" />
-
+</p>
 
 # Command To Install
 
