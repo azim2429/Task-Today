@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'package:tasktoday/model/task.dart';
+import 'package:intl/intl.dart';
 
 class TaskList extends StatelessWidget {
   final List<Task> task;
   final Function deleteTc;
   final Function addTc;
-  //final Widget editTc;
-  TaskList(this.task, this.deleteTc,this.addTc);
+
+  TaskList(this.task, this.deleteTc, this.addTc);
 
   @override
   Widget build(BuildContext context) {
@@ -59,13 +59,15 @@ class TaskList extends StatelessWidget {
                                                 decoration: InputDecoration(
                                                   labelText: 'Enter your tasks',
                                                   border: InputBorder.none,
-                                                  contentPadding: EdgeInsets.only(
-                                                      left: 15,
-                                                      bottom: 11,
-                                                      top: 11,
-                                                      right: 15),
+                                                  contentPadding:
+                                                      EdgeInsets.only(
+                                                          left: 15,
+                                                          bottom: 11,
+                                                          top: 11,
+                                                          right: 15),
                                                 ),
-                                                keyboardType: TextInputType.text,
+                                                keyboardType:
+                                                    TextInputType.text,
                                                 controller: taskController,
                                               ),
                                             ),
@@ -73,14 +75,14 @@ class TaskList extends StatelessWidget {
                                               color: Colors.blue,
                                               child: Text(
                                                 'Submit',
-                                                style:
-                                                    TextStyle(color: Colors.white),
+                                                style: TextStyle(
+                                                    color: Colors.white),
                                               ),
                                               onPressed: () {
-                                             addTc(
-                                             taskController.text,
-                                               );
-                                             deleteTc(tks.id);
+                                                addTc(
+                                                  taskController.text,
+                                                );
+                                                deleteTc(tks.id);
                                               },
                                             ),
                                           ],
@@ -96,10 +98,11 @@ class TaskList extends StatelessWidget {
                   ),
                   title: Text(
                     tks.taskTitle,
-                    style:
-                        TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.bold),
                   ),
-                  subtitle:Text(tks.id.toString()), //Text(DateFormat.yMd().add_jm().format(tks.dateTime)),
+                  subtitle:
+                      Text(DateFormat.yMd().add_jm().format(tks.dateTime)),
                 ),
               ),
             );

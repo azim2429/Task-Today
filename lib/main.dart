@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gradient_app_bar/gradient_app_bar.dart';
 import 'package:tasktoday/widget/user_task.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -35,9 +36,10 @@ class _MyHomePageState extends State<MyHomePage> {
         elevation: 4,
         backgroundColorEnd: Colors.blue[500],
         backgroundColorStart: Colors.lightBlueAccent,
-        title: Text('Task-Today',style: TextStyle(
-          fontWeight: FontWeight.bold
-        ),),
+        title: Text(
+          'Task-Today',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
         centerTitle: true,
       ),
       body: Container(

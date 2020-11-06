@@ -5,8 +5,8 @@ class NoTask extends StatelessWidget {
   final String assetName = 'lib/image/undraw_my_notifications_rjej.svg';
   final Widget svg = SvgPicture.asset(
       'lib/image/undraw_my_notifications_rjej.svg',
-      semanticsLabel: 'Acme Logo'
-  );
+      semanticsLabel: 'Acme Logo');
+
   @override
   Widget build(BuildContext context) {
     return Container(
