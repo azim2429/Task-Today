@@ -26,25 +26,6 @@ flutter emulators --launch <emulator_name>
 flutter run
 ```
 
-### Generate MOOR
-
-```sh
-flutter packages pub run build_runner build
-```
-
-### Build
-
-```sh
-flutter build apk
-```
-
-### Run tests
-
-```sh
-flutter test
-```
-
-
 # Plugins
 
 - [intl](https://pub.dev/packages/intl)
